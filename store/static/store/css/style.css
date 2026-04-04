@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Lucida Sans';
+    background: linear-gradient(120deg,
+            rgb(238, 232, 232),
+            #f3e8ff);
+    font-size: 17px;
+    margin: 5px;
+}
+
+.navbar-brand {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: black;
+    margin-right: 50px;
+}
+
+/* home.html */
+.hero-section {
+    background: linear-gradient(120deg,
+            rgb(238, 232, 232),
+            #f3e8ff);
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+.hero-image {
+    max-height: 450px;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    border-radius: 30px;
+}
+
+.collection-card {
+    background: linear-gradient(135deg, #eee8e8, #ffffff);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.collection-card img {
+    max-height: 180px;
+    object-fit: contain;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #eee8e8, #ebe1e8);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.27);
+}
+
+.feature-products {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.feature-products a {
+    text-decoration: none;
+}
+
+.feature-products .card {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #eee8e8, #ffffff);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.feature-products .card:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, #eee8e8, #ebe1e8);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.323);
+}
+
+.feature-products .card img {
+    width: 100%;
+    height: 200px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.feature-products .card:hover img {
+    transform: scale(1.05);
+}
+
+.specialOffer {
+    margin-top: 40px;
+}
+
+.specialOffer img {
+    height: 500px;
+    width: 100%;
+}
+
+.offer-card {
+    overflow: hidden;
+    border: none;
+}
+
+.offer-card img {
+    filter: blur(3px);
+}
+
+.offer-card .card-title {
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.offer-card .card-text {
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.newArrivals {
+    margin-top: 50px;
+}
+
+.newArrivals .card {
+    background: linear-gradient(135deg, #eee8e8, #ffffff);
+    margin: 15px 0px 15px 0px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.newArrivals .card:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, #eee8e8, #ebe1e8);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.323);
+}
+
+.brands img {
+    width: 100%;
+    max-height: 40px;
+    /* mobile size */
+    object-fit: contain;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+    .brands img {
+        max-height: 80px;
+        /* bigger logos on desktop */
+    }
+}
+
+.footer {
+    background: #111;
+    color: #ccc;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    color: #0d6efd;
+}
+
+.footer-title {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+}
