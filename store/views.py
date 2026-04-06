@@ -18,8 +18,6 @@ def products(request):
     else:
         products = Product.objects.all()
 
-    
-
     return render(request, 'store/product.html', {
         'products': products,
     })
@@ -106,7 +104,6 @@ def checkout(request):
     cart_items.delete()
 
     return redirect('order_success')
-
 
 
 
