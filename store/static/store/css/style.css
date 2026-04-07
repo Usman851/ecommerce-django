@@ -75,8 +75,9 @@ nav {
 }
 
 .feature-products .card {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
     background: linear-gradient(135deg, #eee8e8, #ffffff);
     border: none;
     border-radius: 10px;
@@ -91,7 +92,7 @@ nav {
 
 .feature-products .card img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     transition: transform 0.3s ease;
     object-fit: cover;
 }
