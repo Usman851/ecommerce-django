@@ -1,0 +1,119 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container product-container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="product-card">
+          <!-- TOP FULL IMAGE -->
+          <img src="{{ product.image.url }}" class="product-img" alt="" />
+
+          <!-- BOTTOM DETAILS -->
+          <div class="product-info">
+            <span class="badge-custom">Hot Deal</span>
+
+            <h1 class="product-title mt-2">{{ product.name }}</h1>
+
+            <div class="product-price">₹{{ product.price }}</div>
+
+            <p class="description">{{ product.description }}</p>
+
+            <div class="mt-4">
+              <a href="{% url 'add_to_cart' product.id %}" class="btn btn-dark btn-cart">Add to Cart</a>
+            </div>
+
+            <div class="mt-4">
+              <a href="/products" class="text-decoration-none">⬅ Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .product-container {
+      margin-top: 30px;
+      padding: 0 10px;
+    }
+    
+    .product-card {
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    .product-img {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: contain;
+      background: #fff;
+    }
+    
+    .product-info {
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .product-title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .product-price {
+      font-size: 24px;
+      color: #28a745;
+      margin: 15px 0;
+    }
+    
+    .btn-cart,
+    .btn-buy {
+      border-radius: 30px;
+      padding: 12px 25px;
+      font-size: 16px;
+      margin: 5px;
+    }
+    
+    .badge-custom {
+      background: #ff6b6b;
+      padding: 8px 12px;
+      border-radius: 20px;
+      color: white;
+      font-size: 12px;
+    }
+    
+    .description {
+      margin-top: 20px;
+      color: #555;
+      line-height: 1.6;
+    }
+    
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .product-title {
+        font-size: 22px;
+      }
+    
+      .product-price {
+        font-size: 20px;
+      }
+    
+      .product-info {
+        padding: 20px;
+      }
+    
+      .btn-cart,
+      .btn-buy {
+        width: 100%;
+        display: block;
+      }
+    
+      .product-img {
+        max-height: 300px;
+      }
+    }
+  </style>
+{% endblock %}

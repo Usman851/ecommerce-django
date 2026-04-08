@@ -1,0 +1,91 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">🛒 Your Cart</h2>
+
+    {% if cart_items %}
+    <div class="row">
+
+        <!-- Cart Items -->
+        <div class="col-lg-8">
+            {% for item in cart_items %}
+            <div class="card mb-3 shadow-sm">
+                <div class="row g-0 align-items-center">
+
+                    <!-- Image -->
+                    <div class="col-md-3 text-center p-2">
+                        <img src="{{ item.product.image.url }}" class="img-fluid" style="max-height:120px; object-fit:contain;">
+                    </div>
+
+                    <!-- Details -->
+                    <div class="col-md-5">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ item.product.name }}</h5>
+                            <p class="text-success">₹{{ item.product.price }}</p>
+                        </div>
+                    </div>
+
+                    <!-- Quantity Controls -->
+                    <div class="col-md-2 text-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="{% url 'update_cart' item.pk 'decrease' %}" class="btn btn-sm btn-outline-secondary">-</a>
+                            <span class="mx-2">{{ item.quantity }}</span>
+                            <a href="{% url 'update_cart' item.pk 'increase' %}" class="btn btn-sm btn-outline-secondary">+</a>
+                        </div>
+                    </div>
+
+                    <!-- Total + Remove -->
+                    <div class="col-md-2 text-center">
+                        <p class="fw-bold">₹{{ item.total_price }}</p>
+                        <a href="{% url 'remove_cart_item' item.pk %}" class="btn btn-sm btn-danger">Remove</a>
+                    </div>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Summary -->
+        <div class="col-lg-4">
+            <div class="card shadow-sm p-3">
+                <h4>Order Summary</h4>
+                <hr>
+                <p class="d-flex justify-content-between">
+                    <span>Total:</span>
+                    <strong>₹{{ total }}</strong>
+                </p>
+
+                <a href="{% url 'checkout' %}" class="btn btn-success w-100 mt-3">Proceed to Checkout</a>
+            </div>
+        </div>
+
+    </div>
+
+    {% else %}
+        <div class="text-center mt-5">
+            <h4>Your cart is empty 😢</h4>
+            <a href="{% url 'products' %}" class="btn btn-primary mt-3">Shop Now</a>
+        </div>
+    {% endif %}
+</div>
+
+<style>
+    .card {
+        border-radius: 15px;
+    }
+
+    @media (max-width: 768px) {
+        .card .row  div {
+            text-align: center;
+        }
+
+        .card img {
+            max-height: 100px;
+        }
+    }
+</style>
+
+{% endblock %}

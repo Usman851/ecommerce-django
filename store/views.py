@@ -88,7 +88,7 @@ def checkout(request):
     order = Order.objects.create(
         user=request.user,
         total_amount=total_amount,
-        is_paid=True   # for now we mark as paid
+        is_paid=True   
     )
 
     # Create Order Items
@@ -104,7 +104,9 @@ def checkout(request):
     cart_items.delete()
 
     return redirect('order_success')
-
+@login_required
+def order_success(request):
+    return render(request, 'store/order_success.html')
 
 
 
