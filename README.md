@@ -43,7 +43,7 @@ A full-stack ecommerce web application built using **Django**. Users can browse 
 
 * **Backend:** Django (Python)
 * **Frontend:** HTML, CSS, Bootstrap
-* **Database:** SQLite (default)
+* **Database:** MySQL
 * **Authentication:** Django Auth
 
 ---
