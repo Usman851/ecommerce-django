@@ -66,147 +66,179 @@
   </div>
 
   <div class="feature-products">
-  <div class="title text-center">
-    <h1>FEATURED PRODUCTS</h1>
-    <a href="{% url 'products' %}?category=featured">view all</a>
+    <div class="title text-center">
+      <h1>FEATURED PRODUCTS</h1>
+      <a href="{% url 'products' %}?category=featured">view all</a>
+    </div>
+
+    <div class="container">
+      <div class="row mt-3 g-4 justify-content-center">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-10">
+          <a href="{% url 'products' %}?category=featured">
+            <div class="card h-100 mx-auto">
+              <img src="{% static 'store/images/feature1.png' %}" class="card-img-top" alt="" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-price text-primary">₹ 3999</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-10">
+          <a href="{% url 'products' %}?category=featured">
+            <div class="card h-100 mx-auto">
+              <img src="{% static 'store/images/feature2.png' %}" class="card-img-top" alt="" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-price text-primary">₹ 1999</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-10">
+          <a href="{% url 'products' %}?category=featured">
+            <div class="card h-100 mx-auto">
+              <img src="{% static 'store/images/feature3.png' %}" class="card-img-top" alt="" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-price text-primary">₹ 9999</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-10">
+          <a href="{% url 'products' %}?category=featured">
+            <div class="card h-100 mx-auto">
+              <img src="{% static 'store/images/feature4.png' %}" class="card-img-top" alt="" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-price text-primary">₹ 12999</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="container">
-    <div class="row mt-3 g-4 justify-content-center">
+  <div class="container my-5">
+    <!-- 🔥 SPECIAL OFFER (FULL WIDTH) -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="card offer-card text-white">
+          <img src="{% static 'store/images/offer.png' %}" class="card-img" alt="Offer" />
+          <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center">
+            <h2 class="fw-bold">SPECIAL OFFER</h2>
+            <p>Special discounts for women this RAMADAN</p>
+            <a href="{% url 'products' %}?category=women" class="btn btn-light px-4">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <div class="col-lg-3 col-md-4 col-sm-6 col-10">
+    <!-- 🛍️ PRODUCTS GRID -->
+    <div class="row g-4 justify-content-center newArrivals">
+      <!-- CARD 1 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 col-12">
         <a href="{% url 'products' %}?category=featured" class="text-decoration-none text-dark">
-          <div class="card h-100 mx-auto">
-            <img src="{% static 'store/images/feature1.png' %}" class="card-img-top" alt="">
+          <div class="card product-card h-100">
+            <div class="img-wrapper">
+              <img src="{% static 'store/images/new1.png' %}" />
+            </div>
             <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-price text-primary">₹ 3999</h6>
+              <h6>Product Name</h6>
+              <h5 class="text-primary">₹ 12999</h5>
             </div>
           </div>
         </a>
       </div>
 
-      <div class="col-lg-3 col-md-4 col-sm-6 col-10">
-        <a href="{% url 'products' %}?category=featured" class="text-decoration-none text-dark">
-          <div class="card h-100 mx-auto">
-            <img src="{% static 'store/images/feature2.png' %}" class="card-img-top" alt="">
+      <!-- CARD 2 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+        <a href="#" class="text-decoration-none text-dark">
+          <div class="card product-card h-100">
+            <div class="img-wrapper">
+              <img src="{% static 'store/images/new2.png' %}" />
+            </div>
             <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-price text-primary">₹ 1999</h6>
+              <h6>Product Name</h6>
+              <h5 class="text-primary">₹ 12999</h5>
             </div>
           </div>
         </a>
       </div>
 
-      <div class="col-lg-3 col-md-4 col-sm-6 col-10">
-        <a href="{% url 'products' %}?category=featured" class="text-decoration-none text-dark">
-          <div class="card h-100 mx-auto">
-            <img src="{% static 'store/images/feature3.png' %}" class="card-img-top" alt="">
+      <!-- CARD 3 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+        <a href="#" class="text-decoration-none text-dark">
+          <div class="card product-card h-100">
+            <div class="img-wrapper">
+              <img src="{% static 'store/images/new3.png' %}" />
+            </div>
             <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-price text-primary">₹ 9999</h6>
+              <h6>Product Name</h6>
+              <h5 class="text-primary">₹ 12999</h5>
             </div>
           </div>
         </a>
       </div>
 
-      <div class="col-lg-3 col-md-4 col-sm-6 col-10">
-        <a href="{% url 'products' %}?category=featured" class="text-decoration-none text-dark">
-          <div class="card h-100 mx-auto">
-            <img src="{% static 'store/images/feature4.png' %}" class="card-img-top" alt="">
+      <!-- CARD 4 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+        <a href="#" class="text-decoration-none text-dark">
+          <div class="card product-card h-100">
+            <div class="img-wrapper">
+              <img src="{% static 'store/images/new4.png' %}" />
+            </div>
             <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-price text-primary">₹ 12999</h6>
+              <h6>Product Name</h6>
+              <h5 class="text-primary">₹ 12999</h5>
             </div>
           </div>
         </a>
       </div>
 
+      <!-- CARD 5 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+        <a href="#" class="text-decoration-none text-dark">
+          <div class="card product-card h-100">
+            <div class="img-wrapper">
+              <img src="{% static 'store/images/new5.png' %}" />
+            </div>
+            <div class="card-body text-center">
+              <h6>Product Name</h6>
+              <h5 class="text-primary">₹ 12999</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+        <a href="#" class="text-decoration-none text-dark">
+          <div class="card product-card h-100">
+            <div class="img-wrapper">
+              <img src="{% static 'store/images/new6.png' %}" />
+            </div>
+            <div class="card-body text-center">
+              <h6>Product Name</h6>
+              <h5 class="text-primary">₹ 12999</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ✅ NEW ARRIVALS TITLE (BOTTOM) -->
+    <div class="text-center mt-5">
+      <h1 class="fw-bold">NEW ARRIVALS</h1>
+      <a class="text-decoration-none text-primary" href="{% url 'products' %}?category=featured">View All</a>
     </div>
   </div>
-</div>
-
-  <div class="specialOffer">
-    <div class="card offer-card">
-      <img src="{% static 'store/images/offer.png' %}" class="card-img" alt="..." />
-      <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-center">
-        <h2 class="card-title">SPECIAL OFFER</h2>
-        <h4 class="card-text">Special offers discounts for women in this RAMADAN</h4>
-        <a href="{% url 'products' %}?category=women" class="btn btn-primary mt-2">shop now</a>
-      </div>
-    </div>
-  </div>
-  <div class="container newArrivals text-center">
-    <div class="row justify-content-center">
-      <div class="col-md-4 col-sm-6 d-flex justify-content-center">
-        <div class="card">
-          <img src="{% static 'store/images/new1.png' %}" class="card-img" />
-          <div class="card-body text-center">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-price text-primary">₹ 12999</h6>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 d-flex justify-content-center">
-        <div class="card">
-          <img src="{% static 'store/images/new2.png' %}" class="card-img" />
-          <div class="card-body text-center">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-price text-primary">₹ 12999</h6>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 d-flex justify-content-center">
-        <div class="card">
-          <img src="{% static 'store/images/new3.png' %}" class="card-img" />
-          <div class="card-body text-center">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-price text-primary">₹ 12999</h6>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 d-flex justify-content-center">
-        <div class="card">
-          <img src="{% static 'store/images/new4.png' %}" class="card-img" />
-          <div class="card-body text-center">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-price text-primary">₹ 12999</h6>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 d-flex justify-content-center">
-        <div class="card">
-          <img src="{% static 'store/images/new5.png' %}" class="card-img" />
-          <div class="card-body text-center">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-price text-primary">₹ 12999</h6>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 d-flex justify-content-center">
-        <div class="card">
-          <img src="{% static 'store/images/new6.png' %}" class="card-img" />
-          <div class="card-body text-center">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-price text-primary">₹ 12999</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="title mt-4">
-      <h1>NEW ARRIVALS</h1>
-    </div>
-
-    <div class="link text-primary">
-      <a class="text-decoration-none" href="{% url 'products' %}?category=featured">view all</a>
-    </div>
-  </div>
+  
   <div class="container brands py-4">
     <div class="row text-center align-items-center">
       <div class="col-3">
